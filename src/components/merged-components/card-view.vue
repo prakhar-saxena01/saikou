@@ -144,7 +144,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .view-parent {
   position: relative;
 
@@ -163,7 +163,6 @@ export default {
   border-radius: 100%;
   margin: 5.5rem 10px 10px 10px;
   cursor: pointer;
-  box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.1);
   box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.1);
   &.end {
     right: 0;

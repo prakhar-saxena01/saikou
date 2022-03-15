@@ -1,6 +1,6 @@
 <template>
   <div v-bind:class="{spanned:span}" class="genre">
-    <img v-bind:src="propsrc ? propsrc : imgsrc" />
+    <img v-bind:src="propsrc ?? imgsrc" />
     <!-- use given propsrc, else use from genre-map -->
     <span class="dark-overlay" />
     <div class="genrename">
@@ -24,7 +24,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .genre {
   width: 150px;
   max-width: 250px;
@@ -58,6 +58,8 @@ export default {
 .genrename {
   color: #fff;
   position: relative;
+  padding: 4px;
+  font-size: 1.2rem;
   span {
     border-bottom: 3px yellow solid;
     width: 100%;
