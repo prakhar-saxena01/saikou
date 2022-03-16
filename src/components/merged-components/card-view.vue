@@ -28,7 +28,7 @@
         <div
           v-if="pagination"
           v-on:click="apicall()"
-          class="material-icons-round expandmore"
+          class="material-icons-round expandmore unselectable"
         >
           expand_more
         </div>
@@ -127,7 +127,7 @@ export default {
         if (el.scrollLeft <= offset) {this.$refs.slideleft.style.display = "none";}
         else{this.$refs.slideleft.style.display = "block";}
 
-        if (el.scrollLeft >= el.scrollLeftMax - offset) {this.$refs.slideright.style.display = "none";}
+        if (el.scrollLeft >= el.scrollWidth - el.clientWidth - offset) {this.$refs.slideright.style.display = "none";}
         else{this.$refs.slideright.style.display = "block";}
 
         this.setEventSlideButtons() // set event listener after 1 execution
