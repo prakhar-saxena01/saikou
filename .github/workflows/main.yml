@@ -1,8 +1,5 @@
 name: GitHub Action for Yarn
-on: 
-  push:
-      branches:
-        - deploy
+on: [push]
 jobs:
   build:
     name: Cloudflared
