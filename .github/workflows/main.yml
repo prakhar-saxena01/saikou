@@ -1,5 +1,8 @@
 name: GitHub Action for Yarn
-on: [push]
+on: 
+  push:
+      branches:
+        - deploy
 jobs:
   build:
     name: Cloudflared
@@ -13,6 +16,9 @@ jobs:
       - uses: borales/actions-yarn@v2.3.0
         with:
           cmd: build # will run `yarn build` command
-      - uses: borales/actions-yarn@v2.3.0
+      - name: deploy
+        uses: tsunematsu21/actions-publish-gh-pages@v1.0.1
         with:
-          cmd: serve # will run `yarn serve` command
+             dir: dist
+             branch: gh-pages
+             
