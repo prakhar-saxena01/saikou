@@ -5,7 +5,6 @@ jobs:
     name: Cloudflared
     runs-on: ubuntu-latest
     steps:
-      - uses: AnimMouse/setup-cloudflared@v1
       - uses: actions/checkout@v2
       - uses: borales/actions-yarn@v2.3.0
         with:
@@ -14,8 +13,9 @@ jobs:
         with:
           cmd: build # will run `yarn build` command
       - name: deploy
-        uses: tsunematsu21/actions-publish-gh-pages@v1.0.1
+        uses: AnimMouse/setup-cloudflared@v1 
         with:
              dir: dist
-             branch: gh-pages
+             branch: deploy
+             
              
