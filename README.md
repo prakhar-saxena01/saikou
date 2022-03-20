@@ -1,1 +1,2 @@
-मैं बस झील पटेल का कोड उठा के netlify पर डिप्लॉइ करता हूँ]|
+## Repo to deploy on netlify/vercel
+### To host on cloudflare pages: [deploy](https://github.com/prakhar-saxena01/saikou-web-wip/tree/deploy)
