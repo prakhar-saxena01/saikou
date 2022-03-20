@@ -1,1 +1,1 @@
-मैं बस झील पटेल का कोड उठा के netlify पर डिप्लॉइ करता हूँ]|
+This branch is for deploying on github-pages or cloudflare pages.dev
