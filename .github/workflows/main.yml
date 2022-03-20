@@ -13,9 +13,10 @@ jobs:
         with:
           cmd: build # will run `yarn build` command
       - name: deploy
-        uses: AnimMouse/setup-cloudflared@v1 
+        uses: tsunematsu21/actions-publish-gh-pages@v1.0.1
         with:
              dir: dist
-             branch: deploy
+             branch: gh-pages
+             token: ${{ secrets.ACCESS_TOKEN }}
              
              
