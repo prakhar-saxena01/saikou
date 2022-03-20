@@ -2,7 +2,7 @@ name: GitHub Action for Yarn
 on: [push]
 jobs:
   build:
-    name: Test
+    name: Cloudflared
     runs-on: ubuntu-latest
     steps:
       - uses: AnimMouse/setup-cloudflared@v1
